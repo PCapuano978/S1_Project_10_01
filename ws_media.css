@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 8
+   Case Problem 1
+
+   Rhetoric in the United States Styles for Media
+   Author: Patrick M. Capuano
+   Date:   1.29.19
+
+   Filename: ws_media.css
+
+*/
+
+/* VideoPlayer Styles */
+
+/* Starting off our CSS, we target all videos to display them as block with a width of ninty percent, and a margin space that has both top and bottom with five pixels and automatic sides. */
+
+video {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+}
+
+/* Media queries return here with devices that have a display of more than five hundred and twenty one pixels getting video tags made to three hundred and sixty pixels in width, floated right, and then have a top and bottom margin of five pixels. */
+
+@media only screen and (min-width: 521px) {
+
+    video {
+        width: 360px;
+        float: right;
+        margin: 0px 5px;
+    }
+
+}
+
+/* Track Styles */
+
+/* Lastly, we target the caption cues to have a font size of one point three em, a font family of sans-serif, color set to the rgb value to give that shade of pink, and finally a background color of slighly transparent gray. */
+
+::cue {
+    font-size: 1.3em;
+    font-family: sans-serif;
+    color: rgb(221, 128, 160);
+    background-color: rgba(255, 255, 255, 0.8);
+}
